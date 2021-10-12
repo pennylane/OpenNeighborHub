@@ -1,0 +1,24 @@
+@import "main.css";
+
+body {
+    background-color: var(--dark);
+    color: var(--light);
+}
+
+h1 {
+    color: var(--beige);
+    text-shadow: 1px 1px var(--golden);
+}
+
+h2 {
+    color: var(--golden);
+    text-shadow: 0.5px 0.5px var(--beige);
+}
+
+#head {
+    background: linear-gradient(0deg, var(--forest-rgba) 0%, var(--earth-rgba) 8.5%);
+}
+
+#main-container {
+    background: linear-gradient(180deg, var(--golden-rgba) 0, var(--earth-rgba) 4px, var(--dark-rgba) 16px);
+}
