@@ -1,4 +1,8 @@
 - database:
-  db_name: 'OpenNeighborHub'
-  db_user: 'onh'
-  db_pass: 'MYSUP3RS3CR3TPASSW0RD'
+    db_name: 'OpenNeighborHub'
+    db_user: 'onh'
+    db_pass: 'MYSUP3RS3CR3TPASSW0RD'
+
+- site:
+    site_name: 'OPEN NEIGHBOR HUB'
+    site_title: 'Your friendly neighborhood portal'

@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 
+<?php
+require_once 'app/files.php';
+
+$site_name = $GLOBALS['config']['site']['site_name'];
+$site_title = $GLOBALS['config']['site']['site_title'];
+?>
+
 <html>
 
     <head>
@@ -11,8 +18,8 @@
 
         <div id='head'>
             <img class='head_img left' src="assets/sunflower-gnome.png" alt="Sunflower & Garden Gnome">
-            <h1 id='site_title'> OPEN NEIGHBOR HUB </h1>
-            <h2 id='site_subtitle'> Your friendly neighborhood portal </h2>
+            <h1 id='site_title'> <?php echo $site_name ?> </h1>
+            <h2 id='site_subtitle'> <?php echo $site_title ?> </h2>
             <img class='head_img right' src="assets/sunflower-gnome.png" alt="Sunflower & Garden Gnome">
         </div>
         <hr>
@@ -41,11 +48,10 @@
         <div id='main-container'>
             <h3>Welcome</h3>
 
-            <h4> to our </h4>
+            <p>
+                TBD ...
+            </p>
 
-            <h5> awesome </h5>
-
-            <h6> neighborhood </h6>
         </div>
     
     </body>
