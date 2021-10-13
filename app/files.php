@@ -31,7 +31,8 @@ function get_config() {
 
     if ( !array_key_exists('site', $config) ) {
         error_log('[WARNING] No site configuration specified', 0);
-		$cleanconf['site'] = ['site_lang' => 'en'];
+		$cleanconf['site']['site_lang'] = 'en';
+		$cleanconf['site']['site_theme'] = 'onh-main';
     } else {
 		$cleanconf['site'] = get_site_config($config);
 	}
@@ -76,7 +77,8 @@ function get_site_config($config) {
 	$config = $config['site'];
 	
 	$cleanconf = Array();
-	$cleanconf['site'] = ['site_lang' => 'en'];
+	$cleanconf['site_lang'] = 'en';
+    $cleanconf['site_theme'] = 'onh-main';
 
     if ( count($config) < 1 ) {
         error_log('[WARNING] No site configuration specified', 0);
@@ -99,6 +101,14 @@ function get_site_config($config) {
 		} else {
 			$cleanconf['site_lang'] = 'en';
 		}
+	}
+    
+    if (array_key_exists('site_theme', $config)) {
+        $theme = strtolower(strval($config['site_theme']));
+
+        if (!empty($theme)) {
+            $cleanconf['site_theme'] = $theme;
+        }
 	}
 
 	return $cleanconf;

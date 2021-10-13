@@ -2,6 +2,22 @@
 
 require_once 'errors.php';
 
+function check_method($method) {
+    if ($_SERVER['REQUEST_METHOD'] === $method) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function verify_method($method) {
+    if ($_SERVER['REQUEST_METHOD'] === $method) {
+        return true;
+    } else {
+        throw_405();
+    }
+}
+
 function check_session() {
     session_start();
     if (isset($_SESSION['uid'])) {
@@ -23,19 +39,13 @@ function verify_session() {
     }
 }
 
-function check_method($method) {
-    if ($_SERVER['REQUEST_METHOD'] === $method) {
-        return true;
-    } else {
-        return false;
-    }
+function check_admin() {
+    // TBD
+    return false;
 }
 
-function verify_method($method) {
-    if ($_SERVER['REQUEST_METHOD'] === $method) {
-        return true;
-    } else {
-        throw_405();
-    }
+function verify_admin() {
+    // TBD
+    return false;
 }
 
