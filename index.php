@@ -2,9 +2,17 @@
 
 <?php
 require_once 'app/files.php';
+require_once 'app/session.php';
+
+verify_session();
+//$uid = get_uid();
+
+if (check_method('GET')) {
+}
 
 $site_name = $GLOBALS['config']['site']['site_name'];
 $site_title = $GLOBALS['config']['site']['site_title'];
+$site_lang = $GLOBALS['config']['site']['site_lang'];
 ?>
 
 <html>

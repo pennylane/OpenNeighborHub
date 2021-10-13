@@ -6,3 +6,4 @@
 - site:
     site_name: 'OPEN NEIGHBOR HUB'
     site_title: 'Your friendly neighborhood portal'
+    site_lang: 'en'
