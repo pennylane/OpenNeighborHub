@@ -1,6 +1,6 @@
 # OpenNeighborHub
-Open Neighbor Hub
 
+A simple content platform for organizing neighborhoods.
 
 ### Many thanks to
 * @GDJ and j4p4n from openclipart.org for the sunflower and gnome image
